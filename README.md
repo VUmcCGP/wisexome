@@ -39,8 +39,9 @@ python lennormalize.py convert captureregions.bed leno
 
 
 ### Reference creation
-All reference files should be fed into the reference creation scripts. Move the (length normalized) reference samples (part of the `leno/samplename.hits`) into a separate folder (say `refsamples`) and start the reference-finding script for every combination of chromosomes:  
+All reference files should be fed into the reference creation scripts. Move the (length normalized) reference samples (part of the `leno/samplename.hits`) into a separate folder (say `refsamples`). Create a folder called refdata and start the reference-finding script for every combination of chromosomes:  
 ```
+mkdir refdata
 for TARGET in `seq 22 -1 1`
 do
   for REF in `seq 1 1 22`
