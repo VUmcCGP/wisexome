@@ -35,13 +35,13 @@ fileDrop	= args.dropfile
 #sampleHits = cPickle.load(open(fileHits,'r'))
 
 #reference = dict()
-tChroms = [] #[str(x) for x in range(1,23)]
+tChroms = [str(x) for x in range(1,23)]
 tChroms.append('X')
 
 for tChrom in tChroms:
 	curRef = dict()
 	for rChrom in range(1,23):
-		if tChrom != rChrom:
+		if tChrom != str(rChrom):
 			print tChrom,rChrom
 			newData = cPickle.load(open(refData + '/' + str(tChrom) + '.' + str(rChrom) + '.ref','r'))
 			#newData = newData[len(newData)/2:]
