@@ -33,7 +33,7 @@ python consam.py input/samplename.bam captureregions.bed convert/samplename.hits
 
 At this point the data is workable but we can correct for length variations in the target regions:
 ```
-python lennormalize.py convert/samplename.hits captureregions.bed leno/samplename.hits
+python lennormalize.py convert captureregions.bed leno
 ```
 
 
